@@ -92,9 +92,9 @@ class API(object):
             headers=headers
         )
 
-    def get(self, endpoint):
+    def get(self, endpoint, data):
         """ Get requests """
-        return self.__request("GET", endpoint, None)
+        return self.__request("GET", endpoint, data)
 
     def post(self, endpoint, data):
         """ POST requests """
