@@ -76,7 +76,7 @@ class WooCommerceTestCase(unittest.TestCase):
 
         with HTTMock(woo_test_mock):
             # call requests
-            status = self.api.get("products").status_code
+            status = self.api.get("products", {}).status_code
         self.assertEqual(status, 200)
 
     def test_post(self):
